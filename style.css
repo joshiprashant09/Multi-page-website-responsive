@@ -1,0 +1,110 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;      
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url('eduford_img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 4%;
+    align-items: center;
+}
+
+nav img{
+    padding-top: 7px;
+    width: 157px;
+    height: fit-content;
+}
+
+.nav-link{
+    flex: 1;
+    text-align: right;
+}
+.nav-link ul li{
+    padding: 8px 12px;
+    display:inline-block;
+    position: relative;
+}
+
+.nav-link ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight:300;
+}
+
+.nav-link ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #EE4266;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-link ul li a:hover::after{
+    width: 100%;
+}
+
+.head-text{
+    flex-direction: column;
+    width: 80%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.head-text h1{
+    font-size: 6rem;
+    color: aliceblue;
+}
+
+.head-text p{
+    margin:10px 0px 40px;
+    color: rgb(166, 200, 200);
+    font-size: 18px;
+}
+
+.head-text a{
+    text-align: center;
+    text-decoration: none;
+    color: azure;
+    border: 1px solid white;
+    position: relative;
+    display: inline-block;
+    background: transparent;
+    padding: 10px 20px;
+    font-size: larger;
+    border-radius: 5px;
+    transition: transform 0.7s, font-size 0.8s, opacity 0.8s;
+}
+
+.head-text a:hover{
+    opacity: 0.7;
+    font-size: 20px;
+    transform: scale(1.1);
+    border: 1px solid #ffffff;
+    color: #fffefe;
+    background-color:#EE4266;
+}
+
+@media(max-width:700px){
+    .head-text h1{
+        font-size: 3rem;
+    }
+    
+}
